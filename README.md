@@ -30,3 +30,31 @@ function mystery(n) {
 Add your answer to this markdown file. [This
 page](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions)
 might help with the notation for mathematical expressions.
+
+First of all, this is recursively called 3 times, where n/3 is always the input. We can calculate the amount of loops run as $$n^5$$ (where fisrt loop is $$n^2$$, second loop is n, and the third loop is $$n^2$$ $$(n^2 * n * n^2))$$. This can be simplified into:
+
+$$T(n) = 3T(n/3) + n^5$$
+
+This then can be solved:
+
+$$ = 3(3T(n/9) + (n/3)^5)+ n^5$$
+
+$$ = 9T(n/9) + 3(n/3)^5 + n^5$$
+
+$$ = 3^i *T(n/(3^i)) + \sum_{k=0}^{i-1} * 3^i * (n/(3^i))^5$$
+
+We can then substitute i with $$log_3n$$ to get the asymptotic complexity. But this can already be simplified since we know the end behavior, as well as knowing that the summation will add up to $$n^5$$:
+
+$$= n*T(n/n) + n^5$$
+
+$$= n*T(1) + n^5$$
+
+And since T(1) = 1:
+
+$$n+n^5$$
+
+So the final answer would be:
+
+$$n+n^5∈O(n^5)$$
+
+I certify that I have listed all sources used to complete this exercise, including the use of any Large Language Models. All of the work is my own, except where stated otherwise. I am aware that plagiarism carries severe penalties and that if plagiarism is suspected, charges may be filed against me without prior notice.
