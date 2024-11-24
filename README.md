@@ -31,4 +31,14 @@ Add your answer to this markdown file. [This
 page](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions)
 might help with the notation for mathematical expressions.
 
-First of all, this is recursively called 3 times, where n/3 is always the input. We can calculate the amount of loops run as n^5 (where fisrt loop is $$n^2$$, second loop is n, and the third loop is $$n^2$$ $$(n^2 * n * n^2))$$.
+First of all, this is recursively called 3 times, where n/3 is always the input. We can calculate the amount of loops run as $$n^5$$ (where fisrt loop is $$n^2$$, second loop is n, and the third loop is $$n^2$$ $$(n^2 * n * n^2))$$. This can be simplified into:
+
+$$T(n) = 3T(n/3) + n^5$$
+
+This then can be solved:
+
+$$ = 3(3T(n/9) + (n/3)^5)+ n^5$$
+
+$$ = 9T(n/9) + 3(n/3)^5 + n^5$$
+
+$$ = 3^i *T(n/(3^i)) + \sum{k=0}^(i-1) * 3^i * (n/(3^i))^5$$
