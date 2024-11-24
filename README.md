@@ -27,8 +27,8 @@ function mystery(n) {
 }
 ```
 
-Firts of all, this is recursively called 3 times, where n/3 is always the input. We can calculate the amount of loops run as n^5 (where fisrt loop is n^2, second loop is n, and the third loop is n^2 (n^2*n*n^2)).
-
 Add your answer to this markdown file. [This
 page](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions)
 might help with the notation for mathematical expressions.
+
+First of all, this is recursively called 3 times, where n/3 is always the input. We can calculate the amount of loops run as n^5 (where fisrt loop is $$n^2, second loop is n, and the third loop is $$n^2 $$(n^2 * n * n^2)).
