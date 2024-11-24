@@ -43,4 +43,16 @@ $$ = 9T(n/9) + 3(n/3)^5 + n^5$$
 
 $$ = 3^i *T(n/(3^i)) + \sum_{k=0}^{i-1} * 3^i * (n/(3^i))^5$$
 
-We can then substitute i with $$log_3 *n$$
+We can then substitute i with $$log_3n$$ to get the asymptotic complexity. But this can already be simplified since we know the end behavior, as well as knowing that the summation will add up to $$n^5$$:
+
+$$= n*T(n/n) + n^5$$
+
+$$= n*T(1) + n^5$$
+
+And since T(1) = 1:
+
+$$n+n^5$$
+
+So the final answer would be:
+
+$$n+n^5∈O(n^5)$$
