@@ -43,7 +43,7 @@ $$ = 3^2 *(T(n/9) + 3 * (n^5/(3^5)) +n^5$$
 
 We can plug in n/9 for when the size becomes that.
 
-$$ T(n) = 3^3(T(n/27)+ 3^2 * (n^5 / 3^5) +3(n^5 / 3^5) + n^5
+$$ T(n) = 3^3(T(n/27)+ 3^2 * (n^5 / 3^5) +3(n^5 / 3^5) + n^5 $$
 
 $$= T(n/n) + n^5$$
 
@@ -53,7 +53,7 @@ And since T(1) = 1:
 
 $$n^5$$
 
-$$O(n^5)
+$$O(n^5)$$
 
 So the final answer would be:
 
