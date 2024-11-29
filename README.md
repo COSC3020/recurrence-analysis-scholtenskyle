@@ -30,3 +30,25 @@ function mystery(n) {
 Add your answer to this markdown file. [This
 page](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions)
 might help with the notation for mathematical expressions.
+
+First of all, this is recursively called 3 times, where n/3 is always the input. We can calculate the amount of loops run as $$n^5$$ (where fisrt loop is $$n^2$$, second loop is n, and the third loop is $$n^2$$ $$(n^2 * n * n^2))$$. This can be simplified into:
+
+$$T(n) = 3T(n/3) + n^5$$
+
+This then can be solved:
+
+$$ = 3(3T(n/9) + (n/3)^5)+ n^5$$
+
+$$ = 3^2 *(T(n/9) + 3 * (n^5/(3^5)) +n^5$$
+
+We can plug in n/9 for when the size becomes that.
+
+$$ T(n) = 3^3(T(n/27)+ 3^2 * (n^5 / 3^5) +3(n^5 / 3^5) + n^5 $$
+
+We then can compare $$n^(log_3^3)$$ (nested loops) with $$n^5$$ (recursive). Using the master method, we can see that 5>1, which helps us decide that $$n^5$$ is the best fit.
+
+Final complexity: $$O(n^5)$$
+
+https://www.geeksforgeeks.org/how-to-analyse-complexity-of-recurrence-relation/ - This helped me to understand things like the master method for the final analysis.
+
+I certify that I have listed all sources used to complete this exercise, including the use of any Large Language Models. All of the work is my own, except where stated otherwise. I am aware that plagiarism carries severe penalties and that if plagiarism is suspected, charges may be filed against me without prior notice.
