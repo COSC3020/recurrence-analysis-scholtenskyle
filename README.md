@@ -31,23 +31,19 @@ Add your answer to this markdown file. [This
 page](https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/writing-mathematical-expressions)
 might help with the notation for mathematical expressions.
 
-First of all, this is recursively called 3 times, where n/3 is always the input. We can calculate the amount of loops run as $$n^5$$ (where fisrt loop is $$n^2$$, second loop is n, and the third loop is $$n^2$$ $$(n^2 * n * n^2))$$. This can be simplified into:
+When n > 1, $$3T(n/3) + n^5$$ is true.
 
-$$T(n) = 3T(n/3) + n^5$$
+$$3T(n/3) + n^5$$
 
-This then can be solved:
+$$=3 * 3T(n/(3*3)) + 3(n/3)^5 + n^5$$
 
-$$ = 3(3T(n/9) + (n/3)^5)+ n^5$$
+$$=3*3*3T(n/(3*3*3)) + 3 * 3(n/(3*3))^5 + 3(n/3)^5 + n^5$$
 
-$$ = 3^2 *(T(n/9) + 3 * (n^5/(3^5)) +n^5$$
+$$=3*3*3T(n/(3*3*3)) + (3*3n^5)/((3*3)^5) + (3n^5)/(3^5) + n^5$$
 
-We can plug in n/9 for when the size becomes that.
+$$=3*3*3T(n/(3*3*3)) + ((3*3)/((3*3)^5) + 3/(3^5) + 1) * n^5$$
 
-$$ T(n) = 3^3(T(n/27)+ 3^2 * (n^5 / 3^5) +3(n^5 / 3^5) + n^5 $$
-
-We then can compare $$n^(log_3^3)$$ (nested loops) with $$n^5$$ (recursive). Using the master method, we can see that 5>1, which helps us decide that $$n^5$$ is the best fit.
-
-Final complexity: $$O(n^5)$$
+$$3^i * T(n/(3^i)) + (sum_(k=0)^(i-1) ((3^k)/(3^(5k))))*n^5$$
 
 https://www.geeksforgeeks.org/how-to-analyse-complexity-of-recurrence-relation/ - This helped me to understand things like the master method for the final analysis.
 
