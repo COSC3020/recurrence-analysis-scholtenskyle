@@ -51,6 +51,8 @@ Next we substitute i with logn
 
 $$3^{logn} * T(n/(3^{logn})) + (\sum_{k=0}^{logn-1} ((3^k)/(3^{5k})))*n^5$$
 
+$$nT(1) + n^5 * ((3^{logn - 1}/(3^{5(logn-1)}) + 1)$$
+
 $$nT(1) + n^5 * ((3^{logn - 1}/(3^{5(logn-1)})) + n^5$$
 
 $$((3^{logn - 1}/(3^{5(logn-1)})) * n^5$$, except it will always be smaller than $$n^5$$, so the final answer is $$n^5 ∈ O(n^5)$$
