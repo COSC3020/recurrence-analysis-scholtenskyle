@@ -43,7 +43,7 @@ $$=3 * 3 * 3T(n/(3 * 3 * 3)) + (3 * 3n^5)/((3 * 3)^5) + (3n^5)/(3^5) + n^5$$
 
 $$=3 * 3 * 3T(n/(3 * 3 * 3)) + ((3 * 3)/((3 * 3)^5) + 3/(3^5) + 1) * n^5$$
 
-$$3^i * T(n/(3^i)) + (\sum_{k=0}^(i-1) ((3^k)/(3^(5k))))*n^5$$
+$$3^i * T(n/(3^i)) + (\sum_{k=0}^{i-1} ((3^k)/(3^(5k))))*n^5$$
 
 https://www.geeksforgeeks.org/how-to-analyse-complexity-of-recurrence-relation/ - This helped me to understand things like the master method for the final analysis.
 
