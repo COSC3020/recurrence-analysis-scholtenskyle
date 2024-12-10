@@ -51,6 +51,8 @@ Next we substitute i with logn
 
 $$3^{logn} * T(n/(3^{logn})) + (\sum_{k=0}^{logn-1} ((3^k)/(3^{5k})))*n^5$$
 
+And knowing that $$\sum_{k=0}^{logn} 1 = logn$$, we can actually remove the summation and it becomes the following:
+
 $$nT(1) + n^5 * ((3^{logn - 1}/(3^{5(logn-1)}) + 1)$$
 
 $$nT(1) + n^5 * ((3^{logn - 1}/(3^{5(logn-1)})) + n^5$$
